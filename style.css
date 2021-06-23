@@ -1,0 +1,147 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --clr-primary-100: rgb(4, 2, 7);
+  --clr-primary-200: rgb(224, 30, 30);
+  --clr-primary-300: rgb(26, 160, 160);
+  --clr-primary-400: rgb(226, 128, 36);
+  --clr-primary-500: purple;
+  --clr-primary-600: rgb(219, 21, 153);
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: var(--clr-primary-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: var(--clr-primary-200);
+  box-shadow: 0 0 1rem var(--clr-primary-200);
+  animation-name: sun;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.one {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--clr-primary-300);
+  position: absolute;
+  z-index: 1;
+  transform-origin: -4.5rem 50%;
+  margin-left: 10rem;
+  animation-name: one;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.two {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--clr-primary-400);
+  position: absolute;
+  z-index: 2;
+  transform-origin: -7rem 50%;
+  margin-left: 16rem;
+  animation-name: two;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.three {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: var(--clr-primary-500);
+  position: absolute;
+  z-index: 3;
+  transform-origin: -11.2rem 50%;
+  margin-left: 24rem;
+  animation-name: three;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.four {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--clr-primary-600);
+  position: absolute;
+  z-index: 4;
+  transform-origin: -16.5rem 50%;
+  margin-left: 36rem;
+  animation-name: four;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes sun {
+  0% {
+    box-shadow: 0 0 1rem var(--clr-primary-200);
+  }
+  50% {
+    box-shadow: 0 0 2rem var(--clr-primary-200);
+  }
+  100% {
+    box-shadow: 0 0 1rem var(--clr-primary-200);
+  }
+}
+
+@keyframes one {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes two {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes three {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes four {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
